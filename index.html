@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하우솔교육센터학원 대관문의</title>
     <style>
-            @font-face {
+    @font-face {
         font-family: 'GmarketSansMedium';
         src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
         font-weight: normal;
@@ -56,6 +56,29 @@
         .overlay-button:hover{
             border: 3px solid green;
         }
+        
+        .overlay-links {
+        position: absolute;
+        top: 4%; /* 원하는 위치 조정 */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 70px;
+        }
+
+        .overlay-image {
+        width: 440px; /* 조절 가능 */
+        height: auto;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
+        }
+
+        .overlay-image:hover {
+        transform: scale(1.05);
+        }
+
         @media screen and (max-width: 1180px) {
         .overlay-button {
             font-size: 17px;
@@ -67,7 +90,10 @@
         .overlay-button p {
             margin: 6px 0;
         }
+        .overlay-links {
+        top: -1%; /* 원하는 위치 조정 */
         }
+    }
         /* 💻 태블릿: 너비 768px 이하 */
         @media screen and (max-width: 768px) {
         .overlay-button {
@@ -80,21 +106,33 @@
         .overlay-button p {
             margin: 6px 0;
         }
+        .overlay-image{
+            width:280px;
         }
-                /* 📱 모바일: 너비 390px 이하 */
+        .overlay-links{
+            gap:52px;
+        }
+    }
+        /* 📱 모바일: 너비 390px 이하 */
         @media screen and (max-width: 480px) {
         .overlay-button {
             font-size: 6px;
             width: 90px;
             height: 45px;
-            bottom: 165px;
+            bottom: 178px;
             padding: 5px 0px;
         }
 
         .overlay-button p {
             margin: 3px 0;
         }
+        .overlay-image{
+            width:180px;
         }
+        .overlay-links{
+            gap:29px;
+        }
+    }
         /* 📱 모바일: 너비 390px 이하 */
         @media screen and (max-width: 390px) {
         .overlay-button {
@@ -108,7 +146,13 @@
         .overlay-button p {
             margin: 3px 0;
         }
+        .overlay-image{
+            width:136px;
         }
+        .overlay-links{
+            gap:20px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -128,7 +172,20 @@
             <p style="font-weight: 300">010-2350-2002</p>
         </button>
     </div>
-    <img src="images/009.jpg" alt="img9">
+<div class="relative-container">
+  <!-- img9: 배경 이미지 -->
+  <img src="images/009.jpg" alt="img9">
+
+  <!-- 오버레이: img13과 img14 -->
+  <div class="overlay-links">
+    <a href="https://www.instagram.com/reel/DL1DdWhzbdZ" target="_blank">
+      <img src="images/013.png" alt="왼쪽 버튼" class="overlay-image">
+    </a>
+    <a href="https://www.instagram.com/reel/DKOcsl6T9O7" target="_blank">
+      <img src="images/014.png" alt="오른쪽 버튼" class="overlay-image">
+    </a>
+  </div>
+</div>
     <img src="images/010.jpg" alt="img10">
     <img src="images/011.jpg" alt="img11">
     <img src="images/012.jpg" alt="img12">
